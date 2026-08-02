@@ -1,0 +1,31 @@
+{
+  "name": "tabby-trim-selection",
+  "version": "0.1.0",
+  "description": "Trim trailing horizontal whitespace from copied Tabby terminal selections.",
+  "keywords": [
+    "tabby-plugin"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "webpack --mode production",
+    "package:zip": "sh scripts/build-zip.sh",
+    "test": "tsx --test test/*.test.mjs",
+    "check": "npm test && npm run build && npm run package:zip"
+  },
+  "author": "lightless",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/core": "^15.2.10",
+    "@types/node": "18.19.70",
+    "rxjs": "^7.8.2",
+    "tabby-terminal": "1.0.231-nightly.0",
+    "ts-loader": "^9.5.4",
+    "tsx": "^4.20.6",
+    "typescript": "~4.9.5",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
